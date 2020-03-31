@@ -4,7 +4,7 @@ const assertEqual = function(actual, expected) {
 };
 
 const tail = function(arr) {
-  return arr.slice(1);
+  return arr.slice(1)
 };
 
 //test case 1
@@ -26,10 +26,14 @@ assertEqual(original[1], 4);
 
 console.log(original);
 
+/* can't compare arrays directly because javascript compares whether the array is that exact same array, not whether the contents of the arrays are the same. Workaround: check that length is 0, console.log() to see it's empty array */
+
 // test case 3
 let one = tail([1]);
-assertEqual(one, []);
+assertEqual(one.length, 0);
+console.log(one);
 
 // test case 4
 let none = tail([]);
-assertEqual(none, []);
+assertEqual(none.length, 0);
+console.log(none);
