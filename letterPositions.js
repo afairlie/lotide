@@ -16,7 +16,7 @@ const eqArrays = function(arr1, arr2) {
   return true;
 }
 
-// CHALLENGE: 
+// CHALLENGE: return all the indices (zero-based positions) in the string where each character is found.
 const letterPositions = function(sentence) {
   let results = {};
   let valsArray = Object.values(sentence);
@@ -26,11 +26,13 @@ const letterPositions = function(sentence) {
     let letterKey = valsArray[indexNum];
 
     if (results[letterKey] === undefined) {
-      results[letterKey] = [indexNum];
-    } else { results[letterKey].push(indexNum);}
+      results[letterKey] = [parseInt(indexNum)];
+    } else { results[letterKey].push(parseInt(indexNum));}
   }
 
   return results;
 };
 
+// TEST CASE 1
 console.log(letterPositions('Hello'));
+assertArraysEqual(letterPositions('Hello')['l'], [2, 3])
