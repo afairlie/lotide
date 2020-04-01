@@ -1,7 +1,6 @@
-const assertArraysEqual = function(arr1, arr2, expected) {
-  let result = eqArrays(arr1, arr2);
-  result === expected ? console.log(`Assertion Passed ✅ ${result} === ${expected} 👍`)
-    : console.log(`Assertion Failed 🙁 ${result} ❗== ${expected}`);
+const assertArraysEqual = function(arr1, arr2) {
+  eqArrays(arr1, arr2) ? console.log(`Assertion Passed ✅ ${arr1} === ${arr2} 👍`)
+    : console.log(`Assertion Failed 🙁 ${arr1} ❗== ${arr2}`);
 }
 
 const eqArrays = function(arr1, arr2) {
@@ -18,7 +17,7 @@ const eqArrays = function(arr1, arr2) {
 }
 
 // TEST CASES
-assertArraysEqual([1, 2, 3], [1, 2, 3], true);
-assertArraysEqual([1, 2, 3], [3, 2, 1], false);
+assertArraysEqual([1, 2, 3], [1, 2, 3]); // expect pass
+assertArraysEqual([1, 2, 3], [3, 2, 1]); // expect fail
 
-assertArraysEqual([1, 2, 3], [1, 2, 3, 4], false);
+assertArraysEqual([1, 2, 3], [1, 2, 3, 4]); // expect fail
