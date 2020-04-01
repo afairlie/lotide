@@ -27,7 +27,7 @@ const letterPositions = function(sentence) {
 
     if (results[letterKey] === undefined) {
       results[letterKey] = [indexNum];
-    } else { results[letterKey] = '>1';}
+    } else { results[letterKey].push(indexNum);}
   }
 
   return results;
