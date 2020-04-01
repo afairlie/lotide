@@ -4,10 +4,18 @@ const assertEqual = function(actual, expected) {
 };
 
 const countLetters = function(string) {
+  let letterCount = {};
+
   for (let letter of string) {
-    console.log(letter);
+    if (letterCount[letter] === undefined) {
+      letterCount[letter] = 1;
+      console.log(letter);
+    } else if (letterCount[letter]) {
+      letterCount[letter] += 1;
+    }
   }
   // RETURN SOMETHING
+  console.log(letterCount);
   return string;
 }
 
