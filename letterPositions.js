@@ -20,7 +20,6 @@ const eqArrays = function(arr1, arr2) {
 const letterPositions = function(sentence) {
   let results = {};
   let valsArray = Object.values(sentence);
-  console.log(valsArray)
 
   for (let indexNum in valsArray) {
     let letterKey = valsArray[indexNum];
@@ -34,5 +33,7 @@ const letterPositions = function(sentence) {
 };
 
 // TEST CASE 1
-console.log(letterPositions('Hello'));
 assertArraysEqual(letterPositions('Hello')['l'], [2, 3])
+
+// TEST CASE 2
+assertArraysEqual(letterPositions('pneumonoultramicroscopicsilicovolcanoconiosis')['o'], [5, 7, 17, 20, 29, 31, 36, 38, 41]);
