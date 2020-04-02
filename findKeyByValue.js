@@ -9,11 +9,12 @@ const findKeyByValue = function(object, value) {
   let valuesArr = Object.values(object);
   let keysArr = Object.keys(object);
 
-  for (let each in keysArr) {
-    if (value === valuesArr[each]) {
-      return keysArr[each];
+  for (let keyIndex in keysArr) {
+    if (value === valuesArr[keyIndex]) {
+      return keysArr[keyIndex];
     }
   }
+  return undefined;
 }
 
 const bestTVShowsByGenre = { 
