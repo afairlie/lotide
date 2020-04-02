@@ -19,17 +19,17 @@ const eqArrays = function(arr1, arr2) {
 // CHALLENGE: return all the indices (zero-based positions) in the string where each character is found.
 const letterPositions = function(sentence) {
   let results = {};
-  let valsArray = Object.values(sentence);
+  let valsArray = Array.from(sentence);     // convert sentence string to array that (will be) object values | fluke: Object.values(sentence) also works to do this.
 
-  for (let indexNum in valsArray) {
-    let letterKey = valsArray[indexNum];
+  for (let indexNum in valsArray) {     // iterate through valsArray ie. [ 'H', 'e', 'l', 'l', 'o' ]
+    let letterKey = valsArray[indexNum];    // ex. first letterKey = 'H'
 
-    if (results[letterKey] === undefined) {
-      results[letterKey] = [parseInt(indexNum)];
-    } else { results[letterKey].push(parseInt(indexNum));}
+    if (results[letterKey] === undefined) {     // if letter not key in results, 
+      results[letterKey] = [parseInt(indexNum)];    // add letter (key) to results obj = [indexNum of current letter]
+    } else { results[letterKey].push(parseInt(indexNum));}  // push indexNum of current letter to letterKey in results object
   }
 
-  return results;
+  return results;   // return results object
 };
 
 // TEST CASE 1
