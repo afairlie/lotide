@@ -9,7 +9,7 @@ const eqArrays = function(arr1, arr2) {
       return false;
     }
   
-    for (let i = 0; i < arr1.length; i++) {
+    for (let i in arr1) {
       if (arr1[i] !== arr2[i]) {
         return false;
       }
