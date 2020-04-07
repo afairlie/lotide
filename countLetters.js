@@ -1,8 +1,3 @@
-const assertEqual = function(actual, expected) {
-  actual === expected ? console.log(`Assertion Passed ✅ ${actual} === ${expected} 👍`)
-    : console.log(`Assertion Failed 🙁 ${actual} ❗== ${expected}`);
-};
-
 const countLetters = function(string) {
   let letterCount = {};
 
@@ -20,14 +15,4 @@ const countLetters = function(string) {
   return letterCount;
 }
 
-// TEST CASES
-console.log(countLetters('Hello'));
-assertEqual(countLetters('Hello')['l'], 2);
-
-console.log(countLetters('Ariane Fairlie'));
-assertEqual(countLetters('Ariane Fairlie')['i'], 3);
-
-console.log(countLetters('pneumonoultramicroscopicsilicovolcanoconiosis')) // apparently longest word in english dictionary...
-assertEqual(countLetters('pneumonoultramicroscopicsilicovolcanoconiosis')['o'], 9);
-
-// CASES OUT OF SCOPE (for now) - numbers, !?* etc.
+module.exports = countLetters;
