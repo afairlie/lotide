@@ -1,8 +1,8 @@
 {
-  "name": "lotide",
+  "name": "@a_fairlie/lotide",
   "version": "1.0.0",
-  "description": "",
-  "main": "assertArraysEqual.js",
+  "description": "a mini clone of lodash",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
@@ -17,7 +17,7 @@
     "type": "git",
     "url": "git+https://github.com/afairlie/lotide.git"
   },
-  "author": "",
+  "author": "Ariane Fairlie",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/afairlie/lotide/issues"
